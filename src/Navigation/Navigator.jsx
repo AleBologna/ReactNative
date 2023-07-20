@@ -6,6 +6,7 @@ import ItemDetail from '../Screens/ItemDetail'
 import Home from '../Screens/Home'
 import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import { Platform } from "react-native"
 
 const Stack = createNativeStackNavigator()
 
