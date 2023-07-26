@@ -41,7 +41,6 @@ const ItemListCategory = ({
         <Search
           onSearch={onSearch}
           error={keywordError}
-          goBack={()=> navigation.goBack()}
           keyword={keyword}
           setKeyword={setKeyword}
         />
@@ -69,6 +68,7 @@ const styles = StyleSheet.create({
       alignItems:'center',
     },
     containerFlatList:{
+      flex:1,
       alignItems:'center',
       justifyContent:'center'
     }

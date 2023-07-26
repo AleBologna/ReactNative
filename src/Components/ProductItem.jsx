@@ -1,14 +1,16 @@
-import { Image, Pressable, StyleSheet, Text } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 import React from 'react'
 import Card from './Card'
 
 const ProductItem = ({item, navigation}) => {
-
-const onSelect = (id) => {
-  navigation.navigate('ItemDetail',{productId:id})
-}
-
+  
+  const {width} = useWindowDimensions()
+  
+  const onSelect = (id) => {
+  navigation.navigate('ItemDetail',{productId:id, title: item.title})
+  }
   return (
+    <View style={{width: width, alignItems:'center'}}>
     <Pressable onPress={() => onSelect(item.id)}>
       <Card
         additionalStyle={styles.additionalStylesCard}
@@ -21,6 +23,8 @@ const onSelect = (id) => {
           />
       </Card>
     </Pressable>
+
+    </View>
   )
 }
 

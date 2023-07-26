@@ -2,23 +2,20 @@ import { Pressable, StyleSheet, Text, TextInput, View, useWindowDimensions } fro
 import { FontAwesome } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { colors } from '../Global/Colors';
-import { AntDesign } from '@expo/vector-icons';
 
-const Search = ({
+
+const   Search = ({
     onSearch,
     error,
-    goBack,
     keyword,
     setKeyword
 }) => {
 
-    const {width, height} = useWindowDimensions();
+    const {width} = useWindowDimensions();
   return (
     <>
     <View style ={styles.container}>
-        <Pressable onPress={goBack}>
-          <AntDesign name="back" size={24} color="black" />
-        </Pressable>
+    
         <TextInput style ={width > 310? styles.input1 : styles.input2} 
             placeholder='Search...'
             value={keyword}

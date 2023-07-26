@@ -16,9 +16,7 @@ const ItemDetail = ({navigation, route}) => {
 
   return (
     <View>
-      <Pressable onPress={() => navigation.goBack()} style={styles.btnBack}>
-        <Text>Volver</Text>
-      </Pressable>
+   
 
     {product ? (
       <View style={styles.containerDetail}>
@@ -52,12 +50,6 @@ const styles = StyleSheet.create({
   imageDetail:{
     width:'100%',
     height:300
-  },
-  btnBack:{
-    width:'100%',
-    backgroundColor:colors.color2,
-    alignItems:'center',
-    paddingVertical:10,
   },
   title:{
     fontSize:18,
