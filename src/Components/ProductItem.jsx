@@ -1,17 +1,21 @@
 import { Image, Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 import React from 'react'
 import Card from './Card'
+import { useDispatch } from 'react-redux'
+import { setIdSelected } from '../Features/Shop/shopSlice'
 
 const ProductItem = ({item, navigation}) => {
   
   const {width} = useWindowDimensions()
-  
-  const onSelect = (id) => {
-  navigation.navigate('ItemDetail',{productId:id, title: item.title})
+  const dispatch = useDispatch()
+
+  const onSelectProduct = () => {
+    dispatch(setIdSelected(item.id))
+    navigation.navigate('ItemDetail',{productId:item.id, title: item.title})
   }
   return (
     <View style={{width: width, alignItems:'center'}}>
-    <Pressable onPress={() => onSelect(item.id)}>
+    <Pressable onPress={onSelectProduct}>
       <Card
         additionalStyle={styles.additionalStylesCard}
       >

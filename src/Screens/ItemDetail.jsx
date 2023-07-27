@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import products from '../Data/products.json'
 import { colors } from '../Global/Colors'
 
-const ItemDetail = ({navigation, route}) => {
+const ItemDetail = ({route}) => {
 
   const {productId} = route.params
 
