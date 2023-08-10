@@ -7,63 +7,94 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import ShopStack from "./ShopStack"
 import CartStack from "./CartStack"
+import MyProfileStack from './MyProfileStack'
 import { colors } from "../Global/Colors";
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome, FontAwesome5, Ionicons } from '@expo/vector-icons';
 import OrderStack from "./OrderStack";
-import { FontAwesome5 } from '@expo/vector-icons';
+import AuthStack from "./AuthStack";
+import { useSelector } from "react-redux";
 
 const Tab = createBottomTabNavigator()
 
 const Navigator = () => {
+
+  const {email} = useSelector (state => state.userReducer.value)
+
   return (
     <SafeAreaView style = {styles.container}>
       <NavigationContainer>
-        <Tab.Navigator
-        screenOptions= {{
-          headerShown: false,
-          tabBarShowLabel: false,
-          tabBarStyle: styles.tabBar,
-        }}>
-          <Tab.Screen
-          name='Shop'
-          component={ShopStack}
-          options={{
-            tabBarIcon:({focused}) =>{
-              return(
-                <View>
-                  <FontAwesome name="shopping-basket" size={24} color={focused? "white" : "black"} />
-                </View>
-              )
-            }
-          }}
+        {
+          email?
+          <Tab.Navigator
+          screenOptions= {{
+            headerShown: false,
+            tabBarShowLabel: false,
+            tabBarStyle: styles.tabBar,
+          }}>
+            <Tab.Screen
+            name='Shop'
+            component={ShopStack}
+            options={{
+              tabBarIcon:({focused}) =>{
+                return(
+                  <View>
+                    <FontAwesome name="shopping-basket" size={24} color={focused? "white" : "black"} />
+                  </View>
+                )
+              }
+            }}
+            />
+            <Tab.Screen
+            name="Cart"
+            component={CartStack}
+            options={{
+              tabBarIcon:({focused}) =>{
+                return(
+                  <View>
+                    <FontAwesome name="shopping-cart" size={28} color={focused? "white" : "black"} />
+                  </View>
+                )
+              }
+            }}
+            />
+            <Tab.Screen
+            name="Orders"
+            component={OrderStack}
+            options={{
+              tabBarIcon:({focused}) =>{
+                return(
+                  <View>
+                    <FontAwesome5 name="list" size={24} color={focused? "white" : "black"} />
+                  </View>
+                )
+              }
+            }}
+            />
+            <Tab.Screen
+              name="MyProfile"
+              component={MyProfileStack}
+              options={{
+                tabBarIcon: ({ focused }) => {
+                  return (
+                    <View style={styles.item}>
+                      <Ionicons name="person-circle-outline" size={24}
+                      color={
+                          focused
+                            ? 'black'
+                            : 'gray'
+                          }
+                      />
+                    </View>
+                  );
+                },
+              }}
           />
-          <Tab.Screen
-          name="Cart"
-          component={CartStack}
-          options={{
-            tabBarIcon:({focused}) =>{
-              return(
-                <View>
-                  <FontAwesome name="shopping-cart" size={28} color={focused? "white" : "black"} />
-                </View>
-              )
-            }
-          }}
-          />
-          <Tab.Screen
-          name="Orders"
-          component={OrderStack}
-          options={{
-            tabBarIcon:({focused}) =>{
-              return(
-                <View>
-                  <FontAwesome5 name="list" size={24} color={focused? "white" : "black"} />
-                </View>
-              )
-            }
-          }}
-          />
-        </Tab.Navigator>
+          </Tab.Navigator>
+        :
+          <AuthStack/>
+        }
+       
+        
     </NavigationContainer>
   </SafeAreaView>
   )
