@@ -3,6 +3,13 @@ import { FontAwesome } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { colors } from '../Global/Colors';
 
+/**
+ * Search component
+ * @param onSearch Callback when search
+ * @param error For showing error
+ * @param keyword State value when search
+ * @param setKeyword Update state value when search
+ */
 
 const   Search = ({
     onSearch,

@@ -1,34 +1,31 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Entypo } from "@expo/vector-icons";
 import React from "react";
 import { colors } from "../Global/Colors";
-import { Entypo } from "@expo/vector-icons";
-import { useDispatch } from "react-redux";
-import { removeCartItem } from "../Features/Cart/cartSlice";
 
-const CartItem = ({ cartItem }) => {
+const AddressItem = ({ location, navigation }) => {
 
-    const dispatch = useDispatch()
+    const onChangeLocation = () => {
+        navigation.navigate('Location Selector')
+    }
 
-    const onRemoveItem = (cartItem) =>{
-        dispatch(removeCartItem(cartItem.id))
-    }    
-    
     return (
         <View style={styles.card} onPress={() => {}}>
             <View style={styles.textContainer}>
-                <Text style={styles.text}>{cartItem.title} ({cartItem.quantity})</Text>
-                <Text style={styles.text2}>{cartItem.brand}</Text>
-                <Text style={styles.text2}>${cartItem.price}</Text>
-                <Text>{cartItem.id}</Text>
+                <Text style={styles.text}>
+                    {location.address}
+                </Text>
             </View>
-            <Pressable onPress={() => onRemoveItem(cartItem)}>
-                <Entypo name="trash" size={30} color="black" />
+            <Pressable onPress={onChangeLocation}>
+                <Entypo name="location" size={30} color="black">
+                    <Text style={styles.text2}>Change</Text>
+                </Entypo>
             </Pressable>
         </View>
     );
 };
 
-export default CartItem;
+export default AddressItem;
 
 const styles = StyleSheet.create({
     card: {
@@ -50,11 +47,12 @@ const styles = StyleSheet.create({
     },
     text: {
         fontFamily: "Karla",
-        fontSize: 19,
-        color: colors.red,
+        fontSize: 17,
+        color: "black",
     },
     text2: {
-        fontSize: 14,
+        fontFamily: "Karla",
+        fontSize: 19,
         color: colors.color2,
     },
 });

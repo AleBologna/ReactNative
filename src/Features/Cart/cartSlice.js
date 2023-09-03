@@ -4,13 +4,24 @@ export const cartSlice = createSlice({
     name: "Cart",
     initialState: {
         value: {
-            user: "Hardcoder user",
+            user: "",
             updatedAt: "",
             total: null,
             items: []
         }
     },
     reducers: {
+        setInitialCart:(state) => {
+            state.value = {
+                    user: "",
+                    updatedAt: "",
+                    total: null,
+                    items: []
+            }
+        },
+        setUserCart:(state, action) => {
+            state.value.user = action.payload
+        },
         addCartItem: (state, action) => {
             //Logic to add item
             //1. Check productExists
@@ -37,11 +48,18 @@ export const cartSlice = createSlice({
             state.value.updatedAt = new Date().toLocaleString()
         },
         removeCartItem: (state,action) => {
-            //Logic to remove item
+           state.value.items = state.value.items.filter(item=> item.id !== action.payload)
+
+            state.value.total = state.value.items.reduce(
+                (acc, currentItem) => acc += currentItem.price * currentItem.quantity,
+                0
+            )
+
+            state.value.updatedAt = new Date().toLocaleString()
         }
     }
 })
 
-export const {addCartItem, removeCartItem} = cartSlice.actions
+export const {setInitialCart, setUserCart, addCartItem, removeCartItem} = cartSlice.actions
 
 export default cartSlice.reducer

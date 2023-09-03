@@ -26,8 +26,6 @@ const ItemDetail = ({route}) => {
   }
   return (
     <View>
-   
-
     {product ? (
       <View style={styles.containerDetail}>
         <Image 

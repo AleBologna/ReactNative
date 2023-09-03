@@ -1,13 +1,23 @@
+import { useEffect } from 'react';
 import { useFonts } from 'expo-font';
-import Navigator from './src/Navigation/Navigator';
 import { Provider } from 'react-redux';
+
+import Navigator from './src/Navigation/Navigator';
 import store from './src/Store/store';
+import { init } from './src/SQLite';
+import { fonts } from './src/Assets/Fonts';
 
 export default function App() {
   
-  const [fontsLoaded] = useFonts({
-    'Karla': require('./src/Assets/Fonts/Karla/Karla-Light.ttf')
-  });
+  useEffect(()=> {
+    init()
+      .then((result)=> {
+      })
+      .catch(err => {
+    })
+  }, []);
+
+  const [fontsLoaded] = useFonts(fonts);
 
   if (!fontsLoaded) {
     return null;

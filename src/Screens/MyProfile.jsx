@@ -18,6 +18,10 @@ const MyProfile = ({navigation}) => {
         navigation.navigate('Image Selector')
     };
 
+    const launchLocation = async () => {
+        navigation.navigate('List Address')
+    }
+
     return (
         <View style={styles.container}>
             {profileImage || cameraImage  ? (
@@ -34,6 +38,7 @@ const MyProfile = ({navigation}) => {
                 />
             )}
             <AddButton onPress={launchCamera} title="Add profile picture" />
+            <AddButton onPress={launchLocation} title="My address" />
         </View>
     );
 };

@@ -3,8 +3,10 @@ import React from 'react'
 import { colors } from '../Global/Colors'
 import { AntDesign } from '@expo/vector-icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { signOut } from '../Features/User/userSlice';
+import {signOut } from '../Features/User/userSlice';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { setInitialCart} from '../Features/Cart/cartSlice';
+import { deleteSession } from '../SQLite';
 
 const Header = ({navigation, route}) => {
   let title;
@@ -16,7 +18,18 @@ const Header = ({navigation, route}) => {
   else title = route.name
 
   const dispatch = useDispatch()
-  const {email} = useSelector(state => state.userReducer.value)
+  const {email, localId} = useSelector(state => state.userReducer.value)
+
+  const onSignOut = async() => {
+    try {
+      const response = await deleteSession(localId)
+      dispatch(signOut()) 
+      dispatch(setInitialCart())
+    }catch{
+      console.log('Error while sign out:');
+        console.log(error.message);
+    }
+  }
 
   return (
     <View 
@@ -33,7 +46,7 @@ const Header = ({navigation, route}) => {
        email?
          <Pressable
          style={styles.btnSignOut}
-         onPress={() => dispatch(signOut())}
+         onPress={onSignOut}
        >
          <MaterialCommunityIcons name="location-exit" size={24} color="black" />
        </Pressable>
