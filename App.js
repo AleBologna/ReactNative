@@ -6,6 +6,7 @@ import Navigator from './src/Navigation/Navigator';
 import store from './src/Store/store';
 import { init } from './src/SQLite';
 import { fonts } from './src/Assets/Fonts';
+import Error from './src/Components/Error'
 
 export default function App() {
   
@@ -16,6 +17,7 @@ export default function App() {
       .then((result)=> {
       })
       .catch(err => {
+        <Error/>
     })
   }, []);
 
