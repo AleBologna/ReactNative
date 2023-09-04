@@ -36,6 +36,7 @@ export default CategoryItem
 const styles = StyleSheet.create({
     textCategory: {
         fontSize: 18,
+        color:"#000",
         fontFamily: 'Karla'
     }
 })

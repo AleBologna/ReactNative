@@ -31,7 +31,6 @@ const ImageSelector = ({ navigation }) => {
                 mediaTypes: ImagePicker.MediaTypeOptions.All,
                 allowsEditing: true,
                 aspect: [1, 1],
-                //base64: true,
                 quality: 1,
             });
 
@@ -59,7 +58,6 @@ const ImageSelector = ({ navigation }) => {
                 dispatch(saveImage(response.uri));
             }
         } catch (error) {
-            console.log(error);
         }
         navigation.goBack();
     };
@@ -89,10 +87,11 @@ export default ImageSelector;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor:colors.color4,
         alignItems: "center",
         justifyContent: "flex-start",
         gap: 20,
-        marginTop: 20,
+        padding:10,
     },
     image: {
         width: 200,

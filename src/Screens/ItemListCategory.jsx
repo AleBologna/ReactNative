@@ -5,7 +5,8 @@ import { colors } from '../Global/Colors'
 import Search from '../Components/Search'
 import { useSelector } from 'react-redux'
 import { useGetProductsByCategoryQuery } from '../Services/shopServices'
-
+import Loader from '../Components/Loader'
+import Error from '../Components/Error'
 const ItemListCategory = ({
   navigation,
 }) => {
@@ -39,6 +40,12 @@ const ItemListCategory = ({
   }  
 
   return (
+    isError?
+    <Error/>
+    :
+    isLoading?
+    <Loader/>
+    :
     <View style={styles.container}>
         <Search
           onSearch={onSearch}
@@ -66,7 +73,7 @@ export default ItemListCategory
 const styles = StyleSheet.create({
     container: {
       height:'100%',
-      backgroundColor: colors.color4, 
+      backgroundColor: colors.color3, 
       alignItems:'center',
     },
     containerFlatList:{

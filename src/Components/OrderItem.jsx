@@ -13,11 +13,11 @@ const OrderItem = ({ order }) => {
         <View style={styles.card} onPress={() => {}}>
             <View style={styles.textContainer}>
                 <Text style={styles.text}>
-                    {new Date(order.createdAt).toLocaleString()}
+                    {order.updatedAt}
                 </Text>
                 <Text style={styles.text2}>${total}</Text>
             </View>
-            <Feather name="search" size={30} color="black" />
+            <Feather name="search" size={30} color="white" />
         </View>
     );
 };
@@ -44,10 +44,10 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 17,
-        color: "black",
+        color: "#fff",
     },
     text2: {
         fontSize: 19,
-        color: "gray",
+        color: "#aaa",
     },
 });

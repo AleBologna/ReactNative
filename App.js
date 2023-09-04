@@ -9,6 +9,8 @@ import { fonts } from './src/Assets/Fonts';
 
 export default function App() {
   
+  
+
   useEffect(()=> {
     init()
       .then((result)=> {

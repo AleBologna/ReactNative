@@ -14,12 +14,10 @@ const CartItem = ({ cartItem }) => {
     }    
     
     return (
-        <View style={styles.card} onPress={() => {}}>
+        <View style={styles.card}>
             <View style={styles.textContainer}>
                 <Text style={styles.text}>{cartItem.title} ({cartItem.quantity})</Text>
-                <Text style={styles.text2}>{cartItem.brand}</Text>
                 <Text style={styles.text2}>${cartItem.price}</Text>
-                <Text>{cartItem.id}</Text>
             </View>
             <Pressable onPress={() => onRemoveItem(cartItem)}>
                 <Entypo name="trash" size={30} color="black" />
@@ -33,7 +31,7 @@ export default CartItem;
 const styles = StyleSheet.create({
     card: {
         height: 100,
-        backgroundColor: colors.color1,
+        backgroundColor: colors.color4,
         padding: 10,
         margin: 10,
         borderWidth: 2,
@@ -51,10 +49,11 @@ const styles = StyleSheet.create({
     text: {
         fontFamily: "Karla",
         fontSize: 19,
-        color: colors.red,
+        color: '#000',
     },
     text2: {
-        fontSize: 14,
-        color: colors.color2,
+        fontSize: 17,
+        color: colors.color1,
+        fontWeight:'bold'
     },
 });

@@ -1,0 +1,236 @@
+[
+    {
+        "id": 1,
+        "title": "Baggy Dad Women's Jean",
+        "description": "Comfy, high-waisted style for everyday chic.",
+        "price": 75,
+        "stock": 32,
+        "category": "Jeans",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A34940028-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },
+    {
+        "id": 2,
+        "title": "711 Skinny Women's Jeans",
+        "description": "Sleek and stylish, the 711 Skinny Women's Jeans offer a modern, form-fitting silhouette for everyday fashion.",
+        "price": 62,
+        "stock": 10,
+        "category": "Jeans",
+        "images": ["https://lsco.scene7.com/is/image/lsco/188810739-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=960&hei=1280"]
+    },{
+        "id": 3,
+        "title": "Barrel Women's Jeans",
+        "description": "Made in Japan",
+        "price": 198,
+        "stock": 4,
+        "category": "Jeans",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A58890000-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 4,
+        "title": "726 High Rise Flare Jean",
+        "description": "Elevate your look with the 726 High Rise Flare Jean, a classic design that adds a touch of vintage flair to your wardrobe.",
+        "price": 50,
+        "stock": 10,
+        "category": "Jeans",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A34100004-front-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 5,
+        "title": "514 Men Jeans",
+        "description": "The 514 Men's Jeans deliver timeless comfort and style, making them a versatile choice for any occasion.",
+        "price": 49,
+        "stock": 14,
+        "category": "Jeans",
+        "images": ["https://lsco.scene7.com/is/image/lsco/005140831-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 6,
+        "title": "Jackson Worker Overshirt",
+        "description": "The Jackson Worker Overshirt combines rugged durability with a fashionable edge, perfect for completing your casual ensemble.",
+        "price": 62,
+        "stock": 15,
+        "category": "Shirts",
+        "images": ["https://lsco.scene7.com/is/image/lsco/195730198-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 7,
+        "title": "Vintage T-Shirt",
+        "description": "Embrace a retro vibe with our Vintage T-Shirt, featuring a classic design that's both comfortable and effortlessly cool.",
+        "price": 14,
+        "stock": 89,
+        "category": "Shirts",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A06370072-dynamic1-pdp-lse?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 8,
+        "title": "Welt Pocket T-Shirt",
+        "description": "Stay effortlessly stylish with our Welt Pocket T-Shirt, a modern essential that combines comfort and functionality.",
+        "price": 26,
+        "stock": 2,
+        "category": "Shirts",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A58530002-front-pdp-lse?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 9,
+        "title": "Fit Short Sleeve T-Shirt",
+        "description": "The Fit Short Sleeve T-Shirt offers a tailored look for a clean and contemporary appearance.",
+        "price": 22,
+        "stock": 8,
+        "category": "Shirts",
+        "images": ["https://lsco.scene7.com/is/image/lsco/161431013-front-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 10,
+        "title": "Trail Cargo 6",
+        "description": "The Trail Cargo 6 shorts are designed for outdoor adventures, providing convenience and style in one package.",
+        "price": 32,
+        "stock": 5,
+        "category": "Shorts",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A46850016-front-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 11,
+        "title": "Loose Jean 12",
+        "description": "Enjoy the ultimate comfort with our Loose Jean 12, a relaxed fit that doesn't compromise on style.",
+        "price": 29,
+        "stock": 31,
+        "category": "Shorts",
+        "images": ["https://lsco.scene7.com/is/image/lsco/394340009-front-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 12,
+        "title": "XX Chino EZ Waist 8",
+        "description": "The XX Chino EZ Waist 8 trousers offer a comfortable and fashionable choice for any day.",
+        "price": 34,
+        "stock": 20,
+        "category": "Shorts",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A10420010-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 13,
+        "title": "Mid Thigh Women's Shorts",
+        "description": "Stay cool and chic with our Mid Thigh Women's Shorts, perfect for warm-weather outings.",
+        "price": 41,
+        "stock": 3,
+        "category": "Shorts",
+        "images": ["https://lsco.scene7.com/is/image/lsco/858330007-front-pdp-lse?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 14,
+        "title": "80s Mom Women's Shorts",
+        "description": "Embrace the '80s vibe with our 80s Mom Women's Shorts, a retro-inspired fashion statement.",
+        "price": 47,
+        "stock": 7,
+        "category": "Shorts",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A46950004-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 15,
+        "title": "Essential Ribbed Batwing Beanie",
+        "description": "Keep warm and stylish with our Essential Ribbed Batwing Beanie, a versatile accessory for any season.",
+        "price": 17,
+        "stock": 45,
+        "category": "Accesories",
+        "images": ["https://lsco.scene7.com/is/image/lsco/D78260003-front-pdp-ld?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 16,
+        "title": "L-Pack Large Backpack",
+        "description": "The L-Pack Large Backpack combines style and functionality, making it perfect for daily use or travel.",
+        "price": 24,
+        "stock": 10,
+        "category": "Accesories",
+        "images": ["https://lsco.scene7.com/is/image/lsco/D75720003-front-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 17,
+        "title": "Logo No Show Socks",
+        "description": "Logo No Show Socks offer a discreet yet fashionable choice to complement your footwear.",
+        "price": 9,
+        "stock": 87,
+        "category": "Accesories",
+        "images": ["https://lsco.scene7.com/is/image/lsco/378630425-front-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 18,
+        "title": "Fashion Circle Belt",
+        "description": "Elevate your outfit with our Fashion Circle Belt, a stylish accessory that adds flair to any look.",
+        "price": 23,
+        "stock": 23,
+        "category": "Accesories",
+        "images": ["https://lsco.scene7.com/is/image/lsco/Levis/clothing/381330002-front-pdp.jpg?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 19,
+        "title": "Limit Scarf",
+        "description": "Stay cozy and fashionable with the Limit Scarf, a versatile accessory for cold weather.",
+        "price": 17,
+        "stock": 12,
+        "category": "Accesories",
+        "images": ["https://lsco.scene7.com/is/image/lsco/Levis/clothing/771380181-front-pdp.jpg?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 20,
+        "title": "Medium Banana Sling Bag",
+        "description": "The Medium Banana Sling Bag is a trendy and convenient way to carry your essentials on the go.",
+        "price": 18,
+        "stock": 63,
+        "category": "Accesories",
+        "images": ["https://lsco.scene7.com/is/image/lsco/D77040001-front-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 21,
+        "title": "Lexie Long Sleeve bardot Top",
+        "description": "Elevate your style with the Lexie Long Sleeve Bardot Top, a chic and elegant choice for any occasion.",
+        "price": 26,
+        "stock": 20,
+        "category": "Tops",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A60410001-dynamic1-pdp-lse?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 22,
+        "title": "Dry Goods V Neck T-Shirt",
+        "description": "The Dry Goods V Neck T-Shirt combines comfort and a classic V-neck design for a timeless look.",
+        "price": 24,
+        "stock": 11,
+        "category": "Tops",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A59080005-dynamic1-pdp-lse?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 23,
+        "title": "Classic Fit Tank Top",
+        "description": "Stay cool and comfortable with our Classic Fit Tank Top, a versatile addition to your casual wardrobe.",
+        "price": 20,
+        "stock": 31,
+        "category": "Tops",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A59060001-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 24,
+        "title": "Battery CrewNeck Sweater",
+        "description": "Keep warm in style with the Battery Crew Neck Sweater, a cozy essential for chilly days.",
+        "price": 80,
+        "stock": 21,
+        "category": "Sweaters",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A07080015-dynamic1-pdp-lse?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 25,
+        "title": "Relaxed Graphic Crewneck Sweatshirt",
+        "description": "Embrace a laid-back vibe with our Relaxed Graphic Crewneck Sweatshirt, featuring a comfortable fit and trendy graphics.",
+        "price": 35,
+        "stock": 16,
+        "category": "Sweaters",
+        "images": ["https://lsco.scene7.com/is/image/lsco/387120169-dynamic1-pdp-lse?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 26,
+        "title": "Graphic Salinas Crewneck",
+        "description": "The Graphic Salinas Crewneck offers a unique and eye-catching design to enhance your streetwear style.",
+        "price": 47,
+        "stock": 58,
+        "category": "Sweaters",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A55240000-dynamic1-pdp-lse?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 27,
+        "title": "Gold Tab Hoodie",
+        "description": "Add a touch of luxury to your casual look with the Gold Tab Hoodie, featuring a fashionable and comfortable design.",
+        "price": 35,
+        "stock": 5,
+        "category": "Sweaters",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A37240018-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 28,
+        "title": "Graphic Short Sleeve Sweatshirt",
+        "description": "Stay stylish and comfortable with the Graphic Short Sleeve Sweatshirt, perfect for a relaxed yet fashionable look.",
+        "price": 45,
+        "stock": 39,
+        "category": "Sweaters",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A49360000-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    },{
+        "id": 29,
+        "title": "Graphic Salinas Crewneck Black",
+        "description": "Make a bold statement with the Graphic Salinas Crewneck in black, a versatile piece for street-inspired fashion.",
+        "price": 70,
+        "stock": 9,
+        "category": "Sweaters",
+        "images": ["https://lsco.scene7.com/is/image/lsco/A55240019-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=bisharp&fit=crop,0&op_usm=0.6,0.6,8&wid=1120&hei=1494"]
+    }
+]

@@ -1,14 +1,21 @@
 import { FlatList, StyleSheet, View } from 'react-native'
 import React from 'react'
-import OrderData from '../Data/orders.json'
 import OrderItem from '../Components/OrderItem'
+import { useSelector } from 'react-redux'
+import { useGetUserOrderQuery } from '../Services/shopServices'
+import { colors } from '../Global/Colors'
+
 
 const OrderScreen = () => {
+  const email = useSelector (state => state.userReducer.value.email)
+
+  const {data: orders} = useGetUserOrderQuery(email)
+
   return (
-    <View>
+    <View style={styles.container}>
         <FlatList
-        data={OrderData}
-        keyExtractor={orderItem=>orderItem.id}
+        data={orders}
+        keyExtractor={orders=> orders.updatedAt}
         renderItem={({item})=>{
             return(
                 <OrderItem
@@ -24,4 +31,9 @@ const OrderScreen = () => {
 
 export default OrderScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:colors.color4,
+  }
+})

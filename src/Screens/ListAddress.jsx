@@ -4,12 +4,22 @@ import { useSelector } from "react-redux";
 import AddButton from "../Components/AddButton";
 import AddressItem from '../Components/AddressItem'
 import { useGetUserLocationQuery } from "../Services/shopServices";
+import { colors } from "../Global/Colors";
+import Error from "../Components/Error"
+import Loader from "../Components/Loader"
 
 const ListAddress = ({ navigation }) => {
     const { location, localId } = useSelector((state) => state.userReducer.value);
     const {data: userLocationQuery, isError, isLoading} = useGetUserLocationQuery(localId);
 
-    return location?.latitude || userLocationQuery? (
+    return (
+    isError?
+    <Error/>
+    :
+    isLoading?
+    <Loader/>
+    :
+    location?.latitude || userLocationQuery? (
         <AddressItem 
         location={location?.latitude? location : userLocationQuery}
         navigation={navigation} 
@@ -22,6 +32,7 @@ const ListAddress = ({ navigation }) => {
                 onPress={() => navigation.navigate("Location Selector")}
             />
         </View>
+        )
     );
 };
 
@@ -29,12 +40,16 @@ export default ListAddress;
 
 const styles = StyleSheet.create({
     container: {
+        flex:1,
+        backgroundColor:colors.color2,
         justifyContent: 'flex-start',
         alignItems: 'center'
     },
     text: {
+        color:"#fff",
         paddingVertical: 20,
         fontFamily: 'Karla',
-        fontSize: 18
+        fontSize: 18,
+        fontWeight:'bold'
     }
 });

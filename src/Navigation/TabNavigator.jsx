@@ -28,7 +28,7 @@ const TabNavigator = () => {
         tabBarIcon:({focused}) =>{
           return(
             <View>
-              <FontAwesome name="shopping-basket" size={24} color={focused? "white" : "black"} />
+              <FontAwesome name="shopping-basket" size={24} style={focused? styles.onFocused : styles.notFocused}/>
             </View>
           )
         }
@@ -41,7 +41,7 @@ const TabNavigator = () => {
         tabBarIcon:({focused}) =>{
           return(
             <View>
-              <FontAwesome name="shopping-cart" size={28} color={focused? "white" : "black"} />
+              <FontAwesome name="shopping-cart" size={28} style={focused? styles.onFocused : styles.notFocused} />
             </View>
           )
         }
@@ -54,7 +54,7 @@ const TabNavigator = () => {
         tabBarIcon:({focused}) =>{
           return(
             <View>
-              <FontAwesome5 name="list" size={24} color={focused? "white" : "black"} />
+              <FontAwesome5 name="list" size={24} style={focused? styles.onFocused : styles.notFocused}/>
             </View>
           )
         }
@@ -68,11 +68,7 @@ const TabNavigator = () => {
             return (
               <View style={styles.item}>
                 <Ionicons name="person-circle-outline" size={24}
-                color={
-                    focused
-                      ? 'gray'
-                      : 'black'
-                    }
+                style={focused? styles.onFocused : styles.notFocused}
                 />
               </View>
             );
@@ -90,6 +86,16 @@ const styles = StyleSheet.create({
         backgroundColor:colors.color1,
         shadowColor:'black',
         elevation:4,
-        height:50,
+        height:55,
       },
-})
+      onFocused:{
+        color:'#fff',
+        padding:10,
+        borderRadius:100,
+        backgroundColor:colors.color5
+},
+notFocused:{
+  color:'#fff',
+}
+}
+)

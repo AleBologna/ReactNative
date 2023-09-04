@@ -47,14 +47,13 @@ const LoginScreen = ({navigation}) => {
             try {
                 if(resultSignIn.isSuccess) {
                     
-                    console.log('inserting Session');
                     const response = await insertSession({
                         email: resultSignIn.data.email,
                         idToken: resultSignIn.data.idToken,
                         localId: resultSignIn.data.localId,
                     })
-                    console.log('Session inserted: ');
-                    console.log(response); 
+                    
+                    dispatch(setUserCart(resultSignIn.data.email)) 
 
                     dispatch(setUser({
                         email: resultSignIn.data.email,
@@ -68,7 +67,6 @@ const LoginScreen = ({navigation}) => {
                     }))
                 }
             } catch (error) {
-                console.log(error.message);
             }
         })()
     }, [resultSignIn])
@@ -115,7 +113,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.color3,
+        backgroundColor: colors.color5,
         gap: 15,
         paddingVertical: 20,
         borderRadius: 10,

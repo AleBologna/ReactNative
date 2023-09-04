@@ -3,6 +3,7 @@ import React from 'react'
 import Card from './Card'
 import { useDispatch } from 'react-redux'
 import { setIdSelected } from '../Features/Shop/shopSlice'
+import { initialState } from '../Features/Counter/counterSlice'
 
 const ProductItem = ({item, navigation}) => {
   
@@ -11,6 +12,7 @@ const ProductItem = ({item, navigation}) => {
 
   const onSelectProduct = () => {
     dispatch(setIdSelected(item.id))
+    dispatch(initialState())
     navigation.navigate('ItemDetail',{productId:item.id, title: item.title})
   }
   return (

@@ -1,6 +1,7 @@
 import { Image, StyleSheet, View } from "react-native";
 import React from "react";
 import { google_maps_api_key } from "../Database/firebaseConfig";
+import { colors } from "../Global/Colors";
 
 const MapPreview = ({ location }) => {
 
@@ -21,6 +22,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     mapImage: {
+        borderColor:colors.color2,
+        borderWidth:1,
         width: 300,
         height: 300,
     },

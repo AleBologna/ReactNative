@@ -29,10 +29,10 @@ const   Search = ({
             onChangeText={setKeyword}
         />
         <Pressable onPress={()=>onSearch(keyword)}>
-            <FontAwesome name="search" size={24} color="black" />
+            <FontAwesome name="search" size={24} color="white" />
         </Pressable>
         <Pressable onPress={()=> setKeyword("")}>
-            <FontAwesome5 name="eraser" size={24} color="black" />
+            <FontAwesome5 name="eraser" size={24} color="white" />
         </Pressable>
 
         </View>
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         padding: 8,
         fontSize: 18,
         fontFamily: 'Karla',
-        backgroundColor: colors.color2,
+        backgroundColor: colors.color4,
         borderRadius: 10,
     },
     input2: {
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         padding: 8,
         fontSize: 18,
         fontFamily: 'Karla',
-        backgroundColor: colors.color2,
+        backgroundColor: colors.color4,
         borderRadius: 10,
     }
 })

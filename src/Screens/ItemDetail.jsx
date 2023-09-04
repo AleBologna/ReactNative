@@ -1,17 +1,24 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Image, Modal, Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import products from '../Data/products.json'
+import products from '../Data/products2.json'
 import { colors } from '../Global/Colors'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addCartItem } from '../Features/Cart/cartSlice' 
+import Loader from '../Components/Loader'
+import Counter from '../Components/Counter'
 
 const ItemDetail = ({route}) => {
 
-  const {productId} = route.params
-
   const dispatch = useDispatch()
 
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const {productId} = route.params
+
   const [product, setProduct] = useState(null)
+
+  const count = useSelector(state => state.counterReducer.value);
+  
 
   useEffect(()=>{
     const productSelected = products.find (el => el.id === productId)
@@ -21,11 +28,19 @@ const ItemDetail = ({route}) => {
   const onAddCart = () =>{
     dispatch(addCartItem({
       ...product,
-      quantity:1,
+      quantity:count,
     }))
+
+    setModalVisible(true)
+    
   }
+
+  
   return (
-    <View>
+    <View style={styles.container}>
+     
+
+
     {product ? (
       <View style={styles.containerDetail}>
         <Image 
@@ -35,14 +50,35 @@ const ItemDetail = ({route}) => {
         />
         <Text style={styles.title}>{product.title}</Text>
         <Text>{product.description}</Text>
-        <Text style={styles.price}>Precio: ${product.price}</Text>
+        <Text style={styles.price}>Price: ${product.price}</Text>
         <View style={styles.btnCenter}> 
+        <Counter stock={product.stock}/>
           <Pressable style={styles.btnAdd } onPress={onAddCart}>
-            <Text>Add cart</Text>
+            <Text style={styles.textBtn}>Add cart</Text>
           </Pressable>
         </View>
       </View>
-      ) : null } 
+      ) : <Loader/>} 
+
+          <Modal
+            animationType="slide"
+            transparent={true}
+            visible={modalVisible}
+            onRequestClose={() => {
+              setModalVisible(!modalVisible);
+            }}>
+            <View style={styles.centeredView}>
+              <View style={styles.modalView}>
+              <Text style={styles.modalText}>¡Muchas gracias!</Text>
+              <Text style={styles.modalText}>Se han añadido al carrito {count} producto/s</Text>
+                <Pressable
+                  style={[styles.button, styles.buttonClose]}
+                  onPress={() => setModalVisible(!modalVisible)}>
+                  <Text style={styles.textStyle}>Continuar</Text>
+                </Pressable>
+              </View>
+            </View>
+          </Modal>
     </View>
   )
 }
@@ -50,14 +86,18 @@ const ItemDetail = ({route}) => {
 export default ItemDetail
 
 const styles = StyleSheet.create({
+  container:{
+    flex:1,
+  },
   containerDetail:{
-    justifyContent:'center',
-    
+    flex:1,
+    justifyContent:'flex-start',
+    backgroundColor:colors.color4,
     padding:10,
   },
   imageDetail:{
     width:'100%',
-    height:300
+    height:330
   },
   title:{
     fontSize:18,
@@ -74,10 +114,45 @@ const styles = StyleSheet.create({
     justifyContent:'center'
   },
   btnAdd:{
-    backgroundColor:colors.color1,
+    backgroundColor:colors.color3,
+
     paddingHorizontal:70,
     paddingVertical:10,
     borderRadius:30,
     margin:10,
   },
+  textBtn:{
+    color:'#fff'
+    },
+    modalView: {
+      margin: 20,
+      marginTop:'55%',
+      backgroundColor: colors.color3,
+      borderRadius: 20,
+      padding: 35,
+      alignItems: 'center',
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 4,
+      elevation: 5,
+    },
+    buttonClose: {
+      backgroundColor: colors.color4,
+      padding:7,
+      borderRadius:50,
+    },
+    textStyle: {
+      color: '#000',
+      fontWeight: 'bold',
+      textAlign: 'center',
+    },
+    modalText: {
+      marginBottom: 15,
+      textAlign: 'center',
+      color:'#fff'
+    },
 })

@@ -1,48 +1,38 @@
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import { colors } from "../Global/Colors";
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement, incrementByAmount } from "../Features/Counter/counterSlice";
-
-const Counter = () => {
-    const [inputToAdd, setInputToAdd] = useState(0);
+import { increment, decrement } from "../Features/Counter/counterSlice";
+import { AntDesign } from '@expo/vector-icons';
+const Counter = ({stock}) => {
 
     const dispatch = useDispatch()
     const count = useSelector(state => state.counterReducer.value);
- 
+   
+    let disabledAdd = count===stock; 
+    let disabledSubtract = count===1;
+
     return (
         <View style={styles.container}>
             <View style={styles.buttonsContainer}>
+ 
                 <Pressable 
-                    style={styles.button}
-                    onPress={() => dispatch(decrement())}
-                >
-                    <Text style={styles.buttonText}>-</Text>
-                </Pressable>
+                disabled={disabledSubtract}
+                style={styles.button}
+                onPress={() => dispatch(decrement())}
+            >
+                <AntDesign name="minuscircleo" size={36} color="black" />
+                 </Pressable>
+                                
                 <Text style={styles.span}>{count}</Text>
                 <Pressable 
+                disabled={disabledAdd}
                     style={styles.button}
                     onPress={() => dispatch(increment())}  
                 >
-                    <Text style={styles.buttonText}>+</Text>
+                   <AntDesign name="pluscircleo" size={36} color="black" />
                 </Pressable>
             </View>
-            <View style={styles.buttonsContainer}>
-                <TextInput
-                    placeholder="Cantidad a aumentar"
-                    style={styles.spanInput}
-                    onChangeText={setInputToAdd}
-                    value={inputToAdd}
-                />
-                <Pressable 
-                style={styles.button}
-                onPress={() => dispatch(incrementByAmount(Number(inputToAdd)))}>
-                    <Text style={styles.buttonText}>Add</Text>
-                </Pressable>
-            </View>
-            <Pressable style={styles.button}>
-                <Text style={styles.buttonText}>Reset</Text>
-            </Pressable>
         </View>
     );
 };
@@ -54,35 +44,32 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        width: "100%",
-        backgroundColor: colors.color2,
-        padding: 10,
+        width: 300,
+        backgroundColor: colors.color4,
+        padding: 2,
     },
     buttonsContainer: {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        marginBottom: 10,
-    },
-    button: {
-        padding: 10,
+        marginBottom: 5,
         backgroundColor: colors.color4,
     },
+    button: {
+        padding: 2,
+    },
     span: {
-        backgroundColor: colors.color1,
-        width: "60%",
-        padding: 10,
+        backgroundColor: colors.color4,
+        width: 100,
+        padding: 5,
         textAlign: "center",
         fontSize: 20,
     },
     spanInput: {
-        backgroundColor: colors.color1,
-        width: "60%",
+        width: "30%",
         padding: 10,
         textAlign: "center",
         fontSize: 16,
     },
-    buttonText: {
-        fontSize: 18,
-    },
+
 });

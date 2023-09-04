@@ -10,7 +10,7 @@ import { deleteSession } from '../SQLite';
 
 const Header = ({navigation, route}) => {
   let title;
-  if (route.name === 'Home') title ='Inicio'
+  if (route.name === 'Home') title ='Home'
   else if (route.name === 'ItemListCategory') title =route.params.category
   else if (route.name === 'ItemDetail') title =route.params.title
   else if (route.name === 'CartScreen') title = "Cart"
@@ -39,7 +39,7 @@ const Header = ({navigation, route}) => {
      route.name !== "Home" && route.name !== "CartScreen" && route.name !== "OrderScreen" && route.name !== "Signup" && route.name !== "Login" ?
      
         <Pressable style={styles.btnBack} onPress={navigation.goBack}>
-              <AntDesign name="back" size={24} color="black" />
+              <AntDesign name="back" size={24} color="white" />
         </Pressable>
        :null}
        { 
@@ -48,7 +48,7 @@ const Header = ({navigation, route}) => {
          style={styles.btnSignOut}
          onPress={onSignOut}
        >
-         <MaterialCommunityIcons name="location-exit" size={24} color="black" />
+         <MaterialCommunityIcons name="location-exit" size={24} color="white" />
        </Pressable>
        : null 
     }
@@ -71,7 +71,8 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 25,
-        fontFamily: 'Karla'
+        fontFamily: 'Karla',
+        color:"#fff"
     },
     btnBack:{
       position:'absolute',
